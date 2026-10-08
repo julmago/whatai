@@ -25,15 +25,14 @@ Documento de planificación. Lo vamos a completar por partes antes de empezar a 
 ### Pendiente de definir
 
 - Funciones de cada panel de acceso.
-- Método de inicio de sesión y recuperación de cuenta.
-- Datos que se guardarán en la base de datos.
+- Datos adicionales que se guardarán en la base de datos.
 - Conexiones o servicios externos.
 - Qué incluirán las siguientes etapas.
 
 ## 3. Cómo se va a usar
 
 - La pantalla inicial muestra tres tipos de acceso: Super Administrador, Administrador y Colaborador.
-- Cada persona inicia sesión con el acceso que le corresponde.
+- Cada persona inicia sesión con nombre de usuario y contraseña.
 - El Administrador define qué puede ver y manejar cada Colaborador.
 
 **Estado:** estructura inicial definida; recorrido detallado pendiente.
@@ -54,16 +53,21 @@ Documento de planificación. Lo vamos a completar por partes antes de empezar a 
 
 ## 5. Información y base de datos
 
-Antes de elegir tablas o campos, vamos a definir:
+### Usuarios
 
-- Qué información necesita guardar la aplicación.
-- Cómo se relacionan esos datos.
-- Quién puede consultar, crear, modificar o borrar cada dato.
-- Qué información necesita historial o auditoría.
-- Reglas de conservación y eliminación.
+- Se usará una sola tabla para las cuentas de usuario.
+- Cada cuenta tendrá un nombre de usuario único en todo el sistema, independientemente de su rol.
+- La base de datos debe impedir nombres de usuario duplicados.
+- Cada cuenta tendrá una contraseña guardada de forma segura y uno de estos roles: Super Administrador, Administrador o Colaborador.
+- Cada Colaborador quedará asociado al Administrador que lo creó.
 
-**Manejo de una base de datos:** confirmado.  
-**Motor y modelo de datos:** pendientes de definir.
+### Pendiente de definir
+
+- Datos adicionales de cada cuenta, si hicieran falta.
+- Historial de acciones y reglas de conservación/eliminación.
+- Motor de base de datos y modelo completo.
+
+**Manejo de una base de datos:** confirmado.
 
 ## 6. Integraciones
 
@@ -81,11 +85,13 @@ Antes de elegir tablas o campos, vamos a definir:
 - Existe una sola cuenta de Super Administrador.
 - No se puede crear otra cuenta de Super Administrador desde la aplicación.
 - Su única función es crear cuentas de Administrador.
+- Al crear un Administrador, define su nombre de usuario y contraseña.
 - No accede a los paneles ni a los datos operativos de los Administradores.
 
 ### Administrador
 
 - Puede crear todos los Colaboradores que necesite.
+- Al crear un Colaborador, define su nombre de usuario y contraseña.
 - Administra sus propios Colaboradores y, en una etapa posterior, sus propios números de WhatsApp.
 - No puede ver la información de otros Administradores.
 
@@ -97,7 +103,7 @@ Antes de elegir tablas o campos, vamos a definir:
 ### Pendiente de definir
 
 - Detalle de permisos por pantalla y acción.
-- Cómo se crean inicialmente las cuentas y cómo se recupera el acceso.
+- Cómo se crea inicialmente la única cuenta de Super Administrador y cómo se recupera el acceso.
 
 ## 8. Diseño y experiencia
 
@@ -136,6 +142,9 @@ Cuando estén claros el alcance, los datos y las integraciones, vamos a definir:
 - La interfaz será de texto plano al principio; el diseño visual se mejorará al final.
 - Hay tres tipos de acceso: Super Administrador, Administrador y Colaborador.
 - El Super Administrador solo puede crear cuentas de Administrador.
+- Administradores y Colaboradores se crean con nombre de usuario y contraseña.
+- Los nombres de usuario son únicos en el sistema; la base de datos debe rechazar duplicados.
+- Los Colaboradores quedan asociados al Administrador que los crea.
 
 ## 12. Decisiones pendientes
 
