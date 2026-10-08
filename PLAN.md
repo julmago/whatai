@@ -1,6 +1,6 @@
 # Plan del proyecto WhatsApp
 
-Documento de planificación. Lo vamos a completar por partes antes de empezar a programar.
+Documento de planificación y avance. El trabajo se hará por etapas, empezando por los accesos.
 
 ## 1. Objetivo
 
@@ -12,8 +12,8 @@ Documento de planificación. Lo vamos a completar por partes antes de empezar a 
 
 ### Definido para esta etapa
 
-- Preparar los accesos y los permisos de los tres tipos de usuario.
-- Usar una interfaz de texto plano mientras definimos la estructura.
+- Preparar los accesos y permisos de los tres tipos de usuario.
+- Usar una interfaz de texto plano.
 - Incluir el manejo de una base de datos.
 
 ### Fuera de esta etapa
@@ -42,6 +42,8 @@ Documento de planificación. Lo vamos a completar por partes antes de empezar a 
 ### Definido
 
 - Inicio con los tres tipos de acceso.
+- Selector de tipo de acceso.
+- Campos de nombre de usuario y contraseña.
 - Interfaz en texto plano durante esta etapa.
 
 ### A definir
@@ -68,7 +70,8 @@ Documento de planificación. Lo vamos a completar por partes antes de empezar a 
 - Historial de acciones y reglas de conservación/eliminación.
 - Motor de base de datos y modelo completo.
 
-**Manejo de una base de datos:** confirmado.
+**Manejo de una base de datos:** confirmado.  
+**Conexión y creación de cuentas:** pendientes de implementar.
 
 ## 6. Integraciones
 
@@ -122,24 +125,23 @@ Cuando estén claros el alcance, los datos y las integraciones, vamos a definir:
 - Conexión entre la web y la base de datos.
 - Configuración de desarrollo y ejecución.
 
-**Estado:** pendiente; todavía no empezar a programar.
+**Estado:** pantalla inicial en maqueta; servidor y base de datos pendientes.
 
 ## 10. Etapas de trabajo
 
-1. Completar el objetivo y el alcance.
-2. Definir usuarios, tareas y funciones.
-3. Diseñar el recorrido y las pantallas.
-4. Definir la información y el modelo de datos.
-5. Elegir integraciones y arquitectura.
-6. Ordenar las funciones por prioridad.
-7. Empezar a programar por partes.
-8. Probar cada etapa y registrar lo que falta.
+1. Definir accesos y permisos.
+2. Preparar la pantalla inicial en texto plano.
+3. Definir la estructura de la base de datos.
+4. Elegir la tecnología del servidor y conectar la base.
+5. Implementar creación de Administradores y Colaboradores.
+6. Probar roles, permisos y nombres de usuario únicos.
+7. Agregar funciones de WhatsApp en una etapa posterior.
+8. Mejorar el diseño visual al final.
 
 ## 11. Decisiones confirmadas
 
 - El trabajo de este proyecto se realizará en el repositorio `julmago/whatai`.
 - La aplicación va a manejar una base de datos.
-- La planificación se completa antes de empezar a programar.
 - En esta etapa se trabajarán solo los accesos y permisos, sin crear funciones de WhatsApp.
 - La interfaz será de texto plano al principio; el diseño visual se mejorará al final.
 - Hay tres tipos de acceso: Super Administrador, Administrador y Colaborador.
