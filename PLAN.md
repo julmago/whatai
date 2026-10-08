@@ -5,40 +5,52 @@ Documento de planificación. Lo vamos a completar por partes antes de empezar a 
 ## 1. Objetivo
 
 - **Qué problema queremos resolver:** pendiente de definir.
-- **Quiénes van a usar la web:** pendiente de definir.
+- **Quiénes van a usar la web:** Super Administrador, Administradores y Colaboradores.
 - **Qué resultado esperamos:** pendiente de definir.
 
 ## 2. Alcance
 
-### Incluye
-- Una aplicación web relacionada con WhatsApp.
-- Manejo de una base de datos.
+### Definido para esta etapa
+
+- Preparar los accesos y los permisos de los tres tipos de usuario.
+- Usar una interfaz de texto plano mientras definimos la estructura.
+- Incluir el manejo de una base de datos.
+
+### Fuera de esta etapa
+
+- Todavía no se crearán números de WhatsApp.
+- Todavía no se implementarán chats ni funciones de WhatsApp.
+- El diseño visual se mejorará al final.
 
 ### Pendiente de definir
-- Funciones concretas.
-- Usuarios, perfiles y permisos.
+
+- Funciones de cada panel de acceso.
+- Método de inicio de sesión y recuperación de cuenta.
+- Datos que se guardarán en la base de datos.
 - Conexiones o servicios externos.
-- Qué queda fuera de la primera versión.
+- Qué incluirán las siguientes etapas.
 
 ## 3. Cómo se va a usar
 
-- Tareas principales de cada usuario.
-- Recorrido desde que entra a la web hasta que completa una tarea.
-- Casos especiales y errores que hay que contemplar.
+- La pantalla inicial muestra tres tipos de acceso: Super Administrador, Administrador y Colaborador.
+- Cada persona inicia sesión con el acceso que le corresponde.
+- El Administrador define qué puede ver y manejar cada Colaborador.
 
-**Estado:** pendiente de definir.
+**Estado:** estructura inicial definida; recorrido detallado pendiente.
 
 ## 4. Pantallas
 
-Para cada pantalla vamos a definir su objetivo, información, acciones y estados.
+### Definido
 
-- Inicio o acceso.
-- Panel principal.
-- Secciones de trabajo.
-- Configuración.
+- Inicio con los tres tipos de acceso.
+- Interfaz en texto plano durante esta etapa.
+
+### A definir
+
+- Pantallas y opciones disponibles para cada tipo de usuario.
+- Panel principal y navegación.
+- Configuración y gestión de usuarios.
 - Estados vacíos, carga y error.
-
-**Estado:** pendiente de definir. Esta lista es orientativa y puede cambiar.
 
 ## 5. Información y base de datos
 
@@ -50,7 +62,8 @@ Antes de elegir tablas o campos, vamos a definir:
 - Qué información necesita historial o auditoría.
 - Reglas de conservación y eliminación.
 
-**Motor de base de datos y modelo:** pendientes de definir.
+**Manejo de una base de datos:** confirmado.  
+**Motor y modelo de datos:** pendientes de definir.
 
 ## 6. Integraciones
 
@@ -59,26 +72,38 @@ Antes de elegir tablas o campos, vamos a definir:
 - Autenticación y manejo de credenciales.
 - Comportamiento cuando una integración no está disponible.
 
-**Estado:** pendiente de definir.
+**Estado:** pendiente de definir. Las funciones de WhatsApp quedan para una etapa posterior.
 
-## 7. Acceso y seguridad
+## 7. Acceso y permisos
 
-- Inicio de sesión.
-- Perfiles y permisos.
-- Protección de información y credenciales.
-- Registro de acciones importantes.
-- Copias de seguridad y recuperación.
+### Super Administrador
 
-**Estado:** pendiente de definir.
+- Existe una sola cuenta de Super Administrador.
+- No se puede crear otra cuenta de Super Administrador desde la aplicación.
+- Puede crear todos los Administradores que necesite.
+
+### Administrador
+
+- Puede crear todos los Colaboradores que necesite.
+- Administra sus propios Colaboradores y, en una etapa posterior, sus propios números de WhatsApp.
+- No puede ver la información de otros Administradores.
+
+### Colaborador
+
+- Solo ve y maneja lo que su Administrador le habilite.
+- El Administrador puede habilitarle un solo número o varios chats/números, según los permisos que se definan.
+
+### Pendiente de definir
+
+- Si el Super Administrador puede ver o administrar la información de los Administradores.
+- Detalle de permisos por pantalla y acción.
+- Cómo se crean inicialmente las cuentas y cómo se recupera el acceso.
 
 ## 8. Diseño y experiencia
 
-- Estilo visual.
-- Uso en computadora y celular.
-- Navegación.
-- Accesibilidad y claridad de los mensajes.
-
-**Estado:** pendiente de definir.
+- Durante la etapa inicial, la interfaz será de texto plano.
+- El diseño visual se trabajará al final, una vez definida la estructura.
+- Uso en computadora y celular, navegación y claridad de los mensajes: pendientes de definir.
 
 ## 9. Estructura técnica
 
@@ -107,6 +132,9 @@ Cuando estén claros el alcance, los datos y las integraciones, vamos a definir:
 - El trabajo de este proyecto se realizará en el repositorio `julmago/whatai`.
 - La aplicación va a manejar una base de datos.
 - La planificación se completa antes de empezar a programar.
+- En esta etapa se trabajarán solo los accesos y permisos, sin crear funciones de WhatsApp.
+- La interfaz será de texto plano al principio; el diseño visual se mejorará al final.
+- Hay tres tipos de acceso: Super Administrador, Administrador y Colaborador.
 
 ## 12. Decisiones pendientes
 
