@@ -25,7 +25,6 @@ Documento de planificación y avance. El trabajo se hará por etapas, empezando 
 ### Pendiente de definir
 
 - Funciones de cada panel de acceso.
-- Datos adicionales que se guardarán en la base de datos.
 - Conexiones o servicios externos.
 - Qué incluirán las siguientes etapas.
 
@@ -57,18 +56,18 @@ Documento de planificación y avance. El trabajo se hará por etapas, empezando 
 
 ### Usuarios
 
+El modelo inicial está documentado en [database/modelo-inicial.md](database/modelo-inicial.md).
+
 - Se usará una sola tabla para las cuentas de usuario.
 - Cada cuenta tendrá un nombre de usuario único en todo el sistema, independientemente de su rol.
-- La base de datos debe impedir nombres de usuario duplicados.
 - Cada cuenta tendrá una contraseña guardada de forma segura y uno de estos roles: Super Administrador, Administrador o Colaborador.
 - Cada Colaborador quedará asociado al Administrador que lo creó.
 - El nombre de usuario elegido para la única cuenta de Super Administrador es `julmago`.
 
 ### Pendiente de definir
 
-- Datos adicionales de cada cuenta, si hicieran falta.
-- Historial de acciones y reglas de conservación/eliminación.
-- Motor de base de datos y modelo completo.
+- Motor de base de datos y tipos SQL definitivos.
+- Datos adicionales, historial de acciones y reglas de conservación/eliminación, si hicieran falta.
 
 **Manejo de una base de datos:** confirmado.  
 **Conexión y creación de cuentas:** pendientes de implementar.
@@ -125,18 +124,19 @@ Cuando estén claros el alcance, los datos y las integraciones, vamos a definir:
 - Conexión entre la web y la base de datos.
 - Configuración de desarrollo y ejecución.
 
-**Estado:** pantalla inicial en maqueta; servidor y base de datos pendientes.
+**Estado:** pantalla inicial en maqueta y modelo inicial de usuarios documentado; motor de base, servidor y autenticación pendientes.
 
 ## 10. Etapas de trabajo
 
 1. Definir accesos y permisos.
 2. Preparar la pantalla inicial en texto plano.
-3. Definir la estructura de la base de datos.
-4. Elegir la tecnología del servidor y conectar la base.
-5. Implementar creación de Administradores y Colaboradores.
-6. Probar roles, permisos y nombres de usuario únicos.
-7. Agregar funciones de WhatsApp en una etapa posterior.
-8. Mejorar el diseño visual al final.
+3. Documentar el modelo inicial de usuarios.
+4. Elegir el motor de base de datos y preparar el esquema SQL.
+5. Definir el servidor y conectar la base.
+6. Implementar creación de Administradores y Colaboradores.
+7. Probar roles, permisos y nombres de usuario únicos.
+8. Agregar funciones de WhatsApp en una etapa posterior.
+9. Mejorar el diseño visual al final.
 
 ## 11. Decisiones confirmadas
 
