@@ -1,1 +1,42 @@
-hola
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acceso</title>
+</head>
+<body>
+  <main>
+    <h1>Acceso al sistema</h1>
+
+    <p>Seleccioná tu tipo de acceso:</p>
+    <ul>
+      <li>Super Administrador</li>
+      <li>Administrador</li>
+      <li>Colaborador</li>
+    </ul>
+
+    <p>Tipo de acceso:
+      <select id="role" name="role">
+        <option value="">Seleccionar</option>
+        <option value="super_admin">Super Administrador</option>
+        <option value="admin">Administrador</option>
+        <option value="collaborator">Colaborador</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="username">Nombre de usuario</label><br>
+      <input id="username" name="username" type="text" autocomplete="username">
+    </p>
+
+    <p>
+      <label for="password">Contraseña</label><br>
+      <input id="password" name="password" type="password" autocomplete="current-password">
+    </p>
+
+    <p>Esta pantalla es una maqueta. El ingreso se habilitará cuando definamos la conexión con el servidor y la base de datos.</p>
+    <button type="button" disabled>Ingresar</button>
+  </main>
+</body>
+</html>
