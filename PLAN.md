@@ -56,18 +56,25 @@ Documento de planificación y avance. El trabajo se hará por etapas, empezando 
 
 ### Usuarios
 
-El modelo inicial está documentado en [database/modelo-inicial.md](database/modelo-inicial.md).
+El modelo inicial está documentado en [database/modelo-inicial.md](database/modelo-inicial.md), y el esquema ejecutable en [database/schema.sql](database/schema.sql).
 
 - Se usará una sola tabla para las cuentas de usuario.
 - Cada cuenta tendrá un nombre de usuario único en todo el sistema, independientemente de su rol.
 - Cada cuenta tendrá una contraseña guardada de forma segura y uno de estos roles: Super Administrador, Administrador o Colaborador.
 - Cada Colaborador quedará asociado al Administrador que lo creó.
 - El nombre de usuario elegido para la única cuenta de Super Administrador es `julmago`.
+- El motor de base de datos elegido es MySQL.
+
+### Estado actual de la base
+
+- El usuario creó una base de datos llamada `whatai` en phpMyAdmin.
+- La base está creada y todavía no tiene tablas.
+- Falta importar el esquema inicial desde `database/schema.sql`.
 
 ### Pendiente de definir
 
-- Motor de base de datos y tipos SQL definitivos.
 - Datos adicionales, historial de acciones y reglas de conservación/eliminación, si hicieran falta.
+- Tecnología del servidor para conectarse a MySQL.
 
 **Manejo de una base de datos:** confirmado.  
 **Conexión y creación de cuentas:** pendientes de implementar.
@@ -124,24 +131,25 @@ Cuando estén claros el alcance, los datos y las integraciones, vamos a definir:
 - Conexión entre la web y la base de datos.
 - Configuración de desarrollo y ejecución.
 
-**Estado:** pantalla inicial en maqueta y modelo inicial de usuarios documentado; motor de base, servidor y autenticación pendientes.
+**Estado:** pantalla inicial en maqueta y modelo MySQL inicial documentado; motor elegido; servidor y autenticación pendientes.
 
 ## 10. Etapas de trabajo
 
 1. Definir accesos y permisos.
 2. Preparar la pantalla inicial en texto plano.
 3. Documentar el modelo inicial de usuarios.
-4. Elegir el motor de base de datos y preparar el esquema SQL.
-5. Definir el servidor y conectar la base.
-6. Implementar creación de Administradores y Colaboradores.
-7. Probar roles, permisos y nombres de usuario únicos.
-8. Agregar funciones de WhatsApp en una etapa posterior.
-9. Mejorar el diseño visual al final.
+4. Preparar el esquema SQL de MySQL. **Completado.**
+5. Importar el esquema en la base `whatai`.
+6. Definir el servidor y conectar la base.
+7. Implementar creación de Administradores y Colaboradores.
+8. Probar roles, permisos y nombres de usuario únicos.
+9. Agregar funciones de WhatsApp en una etapa posterior.
+10. Mejorar el diseño visual al final.
 
 ## 11. Decisiones confirmadas
 
 - El trabajo de este proyecto se realizará en el repositorio `julmago/whatai`.
-- La aplicación va a manejar una base de datos.
+- La aplicación va a manejar una base de datos MySQL.
 - En esta etapa se trabajarán solo los accesos y permisos, sin crear funciones de WhatsApp.
 - La interfaz será de texto plano al principio; el diseño visual se mejorará al final.
 - Hay tres tipos de acceso: Super Administrador, Administrador y Colaborador.
