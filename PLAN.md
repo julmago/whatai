@@ -67,9 +67,9 @@ El modelo inicial está documentado en [database/modelo-inicial.md](database/mod
 
 ### Estado actual de la base
 
-- El usuario creó una base de datos llamada `whatai` en phpMyAdmin.
-- La base está creada y todavía no tiene tablas.
-- Falta importar el esquema inicial desde `database/schema.sql`.
+- La base `whatai` está creada en phpMyAdmin.
+- Se importó el esquema y existe la tabla `users`.
+- La tabla todavía tiene 0 cuentas.
 
 ### Pendiente de definir
 
@@ -77,6 +77,7 @@ El modelo inicial está documentado en [database/modelo-inicial.md](database/mod
 - Tecnología del servidor para conectarse a MySQL.
 
 **Manejo de una base de datos:** confirmado.  
+**Esquema MySQL:** importado.  
 **Conexión y creación de cuentas:** pendientes de implementar.
 
 ## 6. Integraciones
@@ -131,7 +132,7 @@ Cuando estén claros el alcance, los datos y las integraciones, vamos a definir:
 - Conexión entre la web y la base de datos.
 - Configuración de desarrollo y ejecución.
 
-**Estado:** pantalla inicial en maqueta y modelo MySQL inicial documentado; motor elegido; servidor y autenticación pendientes.
+**Estado:** pantalla inicial en maqueta y modelo MySQL inicial documentado; tabla `users` creada; servidor y autenticación pendientes.
 
 ## 10. Etapas de trabajo
 
@@ -139,9 +140,9 @@ Cuando estén claros el alcance, los datos y las integraciones, vamos a definir:
 2. Preparar la pantalla inicial en texto plano.
 3. Documentar el modelo inicial de usuarios.
 4. Preparar el esquema SQL de MySQL. **Completado.**
-5. Importar el esquema en la base `whatai`.
+5. Importar el esquema en la base `whatai`. **Completado.**
 6. Definir el servidor y conectar la base.
-7. Implementar creación de Administradores y Colaboradores.
+7. Implementar la creación de la cuenta Super Administrador y las cuentas de Administrador y Colaborador.
 8. Probar roles, permisos y nombres de usuario únicos.
 9. Agregar funciones de WhatsApp en una etapa posterior.
 10. Mejorar el diseño visual al final.
@@ -158,6 +159,7 @@ Cuando estén claros el alcance, los datos y las integraciones, vamos a definir:
 - Administradores y Colaboradores se crean con nombre de usuario y contraseña.
 - Los nombres de usuario son únicos en el sistema; la base de datos debe rechazar duplicados.
 - Los Colaboradores quedan asociados al Administrador que los crea.
+- El esquema MySQL inicial se importó en la base `whatai`.
 
 ## 12. Decisiones pendientes
 
