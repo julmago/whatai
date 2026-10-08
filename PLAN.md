@@ -60,6 +60,7 @@ Documento de planificación. Lo vamos a completar por partes antes de empezar a 
 - La base de datos debe impedir nombres de usuario duplicados.
 - Cada cuenta tendrá una contraseña guardada de forma segura y uno de estos roles: Super Administrador, Administrador o Colaborador.
 - Cada Colaborador quedará asociado al Administrador que lo creó.
+- El nombre de usuario elegido para la única cuenta de Super Administrador es `julmago`.
 
 ### Pendiente de definir
 
@@ -83,6 +84,7 @@ Documento de planificación. Lo vamos a completar por partes antes de empezar a 
 ### Super Administrador
 
 - Existe una sola cuenta de Super Administrador.
+- Su nombre de usuario será `julmago`.
 - No se puede crear otra cuenta de Super Administrador desde la aplicación.
 - Su única función es crear cuentas de Administrador.
 - Al crear un Administrador, define su nombre de usuario y contraseña.
@@ -142,6 +144,7 @@ Cuando estén claros el alcance, los datos y las integraciones, vamos a definir:
 - La interfaz será de texto plano al principio; el diseño visual se mejorará al final.
 - Hay tres tipos de acceso: Super Administrador, Administrador y Colaborador.
 - El Super Administrador solo puede crear cuentas de Administrador.
+- El nombre de usuario del único Super Administrador será `julmago`.
 - Administradores y Colaboradores se crean con nombre de usuario y contraseña.
 - Los nombres de usuario son únicos en el sistema; la base de datos debe rechazar duplicados.
 - Los Colaboradores quedan asociados al Administrador que los crea.
