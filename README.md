@@ -19,7 +19,7 @@ Primera etapa: accesos de Super Administrador, Administradores y Colaboradores.
    php scripts/create_super_admin.php
    ```
 
-   El comando crea la cuenta inicial `julmago) y solicita la contraseña sin guardarla en el repositorio.
+   El comando crea la cuenta inicial `julmago` y solicita la contraseña sin guardarla en el repositorio.
 
 5. Iniciá el servidor local para probar la web:
 
