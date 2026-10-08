@@ -80,7 +80,8 @@ Antes de elegir tablas o campos, vamos a definir:
 
 - Existe una sola cuenta de Super Administrador.
 - No se puede crear otra cuenta de Super Administrador desde la aplicación.
-- Puede crear todos los Administradores que necesite.
+- Su única función es crear cuentas de Administrador.
+- No accede a los paneles ni a los datos operativos de los Administradores.
 
 ### Administrador
 
@@ -95,7 +96,6 @@ Antes de elegir tablas o campos, vamos a definir:
 
 ### Pendiente de definir
 
-- Si el Super Administrador puede ver o administrar la información de los Administradores.
 - Detalle de permisos por pantalla y acción.
 - Cómo se crean inicialmente las cuentas y cómo se recupera el acceso.
 
@@ -135,6 +135,7 @@ Cuando estén claros el alcance, los datos y las integraciones, vamos a definir:
 - En esta etapa se trabajarán solo los accesos y permisos, sin crear funciones de WhatsApp.
 - La interfaz será de texto plano al principio; el diseño visual se mejorará al final.
 - Hay tres tipos de acceso: Super Administrador, Administrador y Colaborador.
+- El Super Administrador solo puede crear cuentas de Administrador.
 
 ## 12. Decisiones pendientes
 
